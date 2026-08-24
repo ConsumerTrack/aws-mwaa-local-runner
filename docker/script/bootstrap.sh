@@ -89,7 +89,7 @@ dnf install -y unixODBC-devel
 if [ -n "${PYTHON_DEPS}" ]; then sudo -u airflow pip3 install $PIP_OPTION "${PYTHON_DEPS}"; fi
 
 MWAA_BASE_PROVIDERS_FILE=/mwaa-base-providers-requirements.txt
-echo "Installing providers supported for airflow version ${AIRFLOW_VERSION}"
+echo "Installing providers supported for airflow version: ${AIRFLOW_VERSION}"
 sudo -u airflow pip3 install --constraint /constraints.txt $PIP_OPTION -r $MWAA_BASE_PROVIDERS_FILE
 
 # jq is used to parse json
